@@ -66,13 +66,16 @@
     h2 { font:clamp(38px,4.5vw,54px)/1.05 var(--serif); letter-spacing:-.025em; margin-bottom:0; }
     .section-heading p { max-width:390px; color:var(--muted); margin:0; font-size:14px; }
     .services { background:var(--paper); }
-    .service-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-    .service-card { border:1px solid var(--line); padding:27px 23px 30px; min-height:220px; background:#fffefa; transition:.2s; }
+    .service-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .service-card { border:1px solid var(--line); padding:30px 28px 32px; min-height:220px; background:#fffefa; transition:.2s; }
     .service-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
     .service-number { color:var(--rust); font:24px var(--serif); }
     .service-card h3 { font:25px var(--serif); margin:25px 0 9px; }
-    .service-card p { color:var(--muted); font-size:13px; margin:0; }
+    .service-card ul { color:var(--muted); font-size:13px; line-height:1.8; margin:0; padding-left:18px; columns:1; }
+    .service-card li { padding-left:2px; margin:3px 0; }
     .work { padding-top:88px; }
+    .work-heading { margin-bottom:42px; }
+    .work-heading h2 { font-size:clamp(48px,6vw,70px); color:#102b20; font-weight:700; }
     .work-grid { display:grid; grid-template-columns:1.12fr .88fr .88fr; grid-template-rows:240px 240px; gap:14px; }
     .work-item { position:relative; overflow:hidden; border-radius:3px; background:#ddd; }
     .work-item:first-child { grid-row:span 2; }
@@ -90,7 +93,7 @@
     .stars { color:#d79a00; letter-spacing:3px; font-size:14px; margin-bottom:19px; }
     .quote-card blockquote { margin:0 0 24px; color:#48594e; font:20px/1.4 var(--serif); }
     .quote-card footer { margin-top:auto; color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
-    .placeholder-note { font-size:11px; color:#8b8b7d; margin-top:12px; }
+    
     .contact { background:var(--ink); color:#f8f5ec; padding:90px 0; }
     .contact-grid { display:grid; grid-template-columns:1fr .8fr; gap:70px; align-items:start; }
     .contact h2 { max-width:540px; margin-bottom:20px; }
@@ -132,7 +135,7 @@
       .section { padding:70px 0; }
       .section-heading,.testimonial-top { display:block; }
       .section-heading p,.testimonial-top p { margin-top:16px; }
-      .service-grid { gap:10px; }
+      .service-grid { grid-template-columns:1fr; gap:12px; }
       .service-card { min-height:205px; padding:20px 17px; }
       .service-card h3 { font-size:22px; margin-top:20px; }
       .work-grid { grid-template-columns:1fr 1fr; grid-template-rows:210px 160px 160px; gap:9px; }
@@ -168,25 +171,24 @@
       <div class="wrap hero-grid">
         <div>
           <p class="eyebrow">Wildwood Fix &amp; Finish · Corvallis, Oregon</p>
-          <h1>Good homes<br>grow <em>stronger.</em></h1>
+          <h1>Making your<br>house feel like <em>home.</em></h1>
           <p class="hero-copy">A capable hand, a thoughtful eye, and care in the details. Wildwood helps homeowners take care of the repairs, projects, and improvements that make a house feel more like home.</p>
           <div class="hero-actions">
             <a class="button" href="#contact">Tell me about your project</a>
             <a class="button secondary" href="#services">Explore services</a>
           </div>
-          <p class="hero-note">Practical help. Thoughtful craftsmanship. A little more joy in your home.</p>
         </div>
         <div class="hero-photo">
           <img src="assets/owner.jpg" alt="Wildwood owner at work on a timber-frame project">
-          <div class="photo-tag">Let's make home work better.</div>
+          <div class="photo-tag">Let's make your home work better.</div>
         </div>
       </div>
     </section>
 
     <div class="intro-strip">
       <div class="wrap strip-inner">
-        <strong>Good work. Good people. Better homes.</strong>
-        <span>Projects · Repairs · Carpentry · Design</span>
+        <strong>Good work. Better homes.</strong>
+        <span>Projects · Repairs · Design</span>
       </div>
     </div>
 
@@ -197,19 +199,45 @@
           <p>From the lingering to-do list to the project you've been imagining, let's find a practical, well-crafted way to get it done.</p>
         </div>
         <div class="service-grid">
-          <article class="service-card"><span class="service-number">01</span><h3>Home repairs</h3><p>The fixes and finishing touches that keep your home working the way it should.</p></article>
-          <article class="service-card"><span class="service-number">02</span><h3>Home projects</h3><p>Thoughtful updates, installations, improvements, and those jobs that never quite make it off the list.</p></article>
-          <article class="service-card"><span class="service-number">03</span><h3>Carpentry</h3><p>Custom storage, built-ins, trim, and practical solutions made to fit your space.</p></article>
-          <article class="service-card"><span class="service-number">04</span><h3>Design &amp; planning</h3><p>Help thinking through layouts, details, and how to make a space work better.</p></article>
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Home repairs</h3>
+            <ul>
+              <li>TV mounting</li>
+              <li>Sink and faucet replacement</li>
+              <li>Sink drain leak repairs</li>
+              <li>Toilet repairs and hardware replacement</li>
+              <li>Door adjustments, handles, and locks</li>
+              <li>Cabinet hardware and hinge adjustments</li>
+              <li>Shelving, curtain rods, and blind installation</li>
+              <li>Picture and mirror hanging</li>
+              <li>Drywall patching and touch-ups</li>
+              <li>Caulking and weatherstripping</li>
+              <li>Furniture and fixture assembly</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>Home projects &amp; design</h3>
+            <ul>
+              <li>Gallery wall installations</li>
+              <li>Interior remodels</li>
+              <li>Room refreshes and finish updates</li>
+              <li>Storage improvements and custom shelving</li>
+              <li>Built-in concepts and installations</li>
+              <li>Space planning and layout help</li>
+              <li>Material and finish selections</li>
+              <li>Thoughtful updates to make rooms work better</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section work" id="work">
       <div class="wrap">
-        <div class="section-heading">
-          <div><p class="eyebrow">A few things made better</p><h2>Work with care.</h2></div>
-          <p>A selection of projects and details. This gallery can grow as more Wildwood work is photographed.</p>
+        <div class="section-heading work-heading">
+          <div><p class="eyebrow">Project portfolio</p><h2>Our work speaks for itself.</h2></div>
         </div>
         <div class="work-grid">
           <figure class="work-item"><img src="assets/tiny-home.jpg" alt="Modern tiny home with dark siding and a bright orange entry door"><figcaption>Exterior projects &amp; improvements</figcaption></figure>
@@ -224,18 +252,18 @@
     <section class="section testimonials" id="testimonials">
       <div class="wrap">
         <div class="testimonial-top">
-          <div><p class="eyebrow">Kind words</p><h2>Good things are<br>better shared.</h2></div>
+          <div><p class="eyebrow">Kind words</p><h2>Peace of mind that our customers believe in us.</h2></div>
           <div><p>Nothing means more than a homeowner feeling good about the work and the experience.</p><div class="slider-controls"><button type="button" class="prev" aria-label="Scroll testimonials left">←</button><button type="button" class="next" aria-label="Scroll testimonials right">→</button></div></div>
         </div>
         <div class="testimonial-track" aria-label="Customer testimonials">
-          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Placeholder testimonial — a few words about the care, communication, and quality of the work.”</blockquote><footer>Customer name · Home repair</footer></article>
-          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Placeholder testimonial — what felt easy, helpful, or especially well done about the project.”</blockquote><footer>Customer name · Home project</footer></article>
-          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Placeholder testimonial — a note about the finished result and how it improved the space.”</blockquote><footer>Customer name · Carpentry</footer></article>
-          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Placeholder testimonial — a homeowner's experience working with Wildwood from start to finish.”</blockquote><footer>Customer name · Installation</footer></article>
-          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Placeholder testimonial — a recommendation for someone looking for dependable help at home.”</blockquote><footer>Customer name · Repairs</footer></article>
-          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Placeholder testimonial — a final kind word about the craftsmanship and attention to detail.”</blockquote><footer>Customer name · Design &amp; build</footer></article>
+          <!-- Four sample reviews are fictional drafts; confirm wording and permission before publishing. -->
+          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Taylor replaced our kitchen sink fixtures and repaired a leak in the sink drain. Everything was taken care of thoughtfully, and it was such a relief to have those projects off my list.”</blockquote><footer>Stephanie S.</footer></article>
+          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Taylor helped me put together a gallery wall so I can see pictures of my granddaughter every day. I love how personal it makes the room feel, and those photos make me smile every time I walk by.”</blockquote><footer>Vivica S.</footer></article>
+          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“Taylor listened to what we needed, came up with a practical solution, and paid attention to the little details. The finished project looks great and makes the space work so much better.”</blockquote><footer>Morgan R. · Sample review</footer></article>
+          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“It was wonderful to have someone reliable to help with the list of things around the house that we'd been putting off. Communication was clear, the work was tidy, and the results were exactly what we hoped for.”</blockquote><footer>Alex P. · Sample review</footer></article>
+          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“The new shelving fits the room perfectly and gives us the storage we were missing. Taylor made the whole process easy, from talking through the idea to finishing the installation.”</blockquote><footer>Jamie L. · Sample review</footer></article>
+          <article class="quote-card"><div class="stars">★★★★★</div><blockquote>“We appreciated the thoughtful suggestions and careful workmanship. The updates made a noticeable difference, and we would happily recommend getting in touch with Wildwood.”</blockquote><footer>Chris T. · Sample review</footer></article>
         </div>
-        <p class="placeholder-note">Testimonials shown are temporary placeholders and should be replaced with real customer reviews before launch.</p>
       </div>
     </section>
 
@@ -251,7 +279,7 @@
           <div class="contact-row"><span>Email</span><a href="mailto:taylor@wildwoodfixandfinish.com">taylor@wildwoodfixandfinish.com</a></div>
           <div class="contact-row"><span>Phone</span><a href="tel:+15412866851">(541) 286-6851</a></div>
           <div class="contact-row"><span>Based in</span><span>Corvallis, Oregon</span></div>
-          <div class="contact-row"><span>Business</span><span>Wildwood Fix &amp; Finish</span></div>
+          
         </div>
       </div>
     </section>
